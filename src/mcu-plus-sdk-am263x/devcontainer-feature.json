@@ -1,0 +1,30 @@
+{
+    "name": "TI MCU+ SDK for AM263x",
+    "id": "mcu-plus-sdk-am263x",
+    "version": "1.1.0",
+    "description": "Installs the TI MCU+ SDK and headless host tools for AM263x development.",
+    "documentationURL": "https://github.com/NoahFriendo/sitara-devcontainer-features/tree/master/src/mcu-plus-sdk-am263x",
+    "licenseURL": "https://github.com/NoahFriendo/sitara-devcontainer-features/blob/master/LICENSE",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "26.00.00.06",
+            "proposals": ["26.00.00.06"],
+            "description": "MCU+ SDK version. Override installerUrl and sha256 when changing this value."
+        },
+        "installerUrl": {
+            "type": "string",
+            "default": "https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-r5FY9rRaGv/26.00.00.06.STS/mcu_plus_sdk_am263x_26_00_00_06-linux-x64-installer.run",
+            "description": "HTTPS URL of the AM263x MCU+ SDK Linux x64 installer."
+        },
+        "sha256": {
+            "type": "string",
+            "default": "1dbf6f3d0df12ff5ba68e0b3e13170093fa16167139c9b77ec082f0bd4303edc",
+            "description": "SHA-256 checksum of the installer."
+        }
+    },
+    "containerEnv": {
+        "MCU_PLUS_SDK_PATH": "/opt/ti/mcu_plus_sdk_am263x",
+        "TOOLS_PATH": "/opt/ti"
+    }
+}

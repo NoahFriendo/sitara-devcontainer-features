@@ -1,0 +1,27 @@
+{
+    "name": "TI SysConfig",
+    "id": "sysconfig",
+    "version": "1.1.0",
+    "description": "Installs the headless TI SysConfig CLI for Sitara MCU development.",
+    "documentationURL": "https://github.com/NoahFriendo/sitara-devcontainer-features/tree/master/src/sysconfig",
+    "licenseURL": "https://github.com/NoahFriendo/sitara-devcontainer-features/blob/master/LICENSE",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "1.27.0",
+            "proposals": ["1.27.0"],
+            "description": "SysConfig short version. Override installerUrl and sha256 when changing this value."
+        },
+        "installerUrl": {
+            "type": "string",
+            "default": "https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-nsUM6f7Vvb/1.27.0.4565/sysconfig-1.27.0_4565-setup.run",
+            "description": "HTTPS URL of the Linux x64 SysConfig installer."
+        },
+        "sha256": {
+            "type": "string",
+            "default": "aaaeed931c5dea9fa4fa135612d773af5724e2916148bb6947ef4adc1b980517",
+            "description": "SHA-256 checksum of the installer."
+        }
+    },
+    "containerEnv": {"SYSCONFIG_ROOT": "/opt/ti/sysconfig"}
+}

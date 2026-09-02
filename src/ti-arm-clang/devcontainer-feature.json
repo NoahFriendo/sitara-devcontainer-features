@@ -1,0 +1,40 @@
+{
+    "name": "TI Arm Clang",
+    "id": "ti-arm-clang",
+    "version": "1.1.0",
+    "description": "Installs the TI Arm Clang compiler toolchain for Sitara MCU development.",
+    "documentationURL": "https://github.com/NoahFriendo/sitara-devcontainer-features/tree/master/src/ti-arm-clang",
+    "licenseURL": "https://github.com/NoahFriendo/sitara-devcontainer-features/blob/master/LICENSE",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "4.0.4.LTS",
+            "proposals": ["4.0.4.LTS"],
+            "description": "TI Arm Clang version. Override installerUrl/sha256 (and arm64InstallerUrl/arm64Sha256 on arm64) when changing this value."
+        },
+        "installerUrl": {
+            "type": "string",
+            "default": "https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-ayxs93eZNN/4.0.4.LTS/ti_cgt_armllvm_4.0.4.LTS_linux-x64_installer.bin",
+            "description": "HTTPS URL of the Linux x64 TI Arm Clang installer."
+        },
+        "sha256": {
+            "type": "string",
+            "default": "98c60ecc259a07a54be6fcc0f55990332f493bfe5dad460c0ba83963f5dcb06f",
+            "description": "SHA-256 checksum of the Linux x64 installer."
+        },
+        "arm64InstallerUrl": {
+            "type": "string",
+            "default": "https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-ayxs93eZNN/4.0.4.LTS/ti_cgt_armllvm_4.0.4.LTS_linux-arm64_installer.bin",
+            "description": "HTTPS URL of the Linux arm64 TI Arm Clang installer."
+        },
+        "arm64Sha256": {
+            "type": "string",
+            "default": "",
+            "description": "SHA-256 checksum of the Linux arm64 installer. Required when building on linux/arm64."
+        }
+    },
+    "containerEnv": {
+        "CG_TOOL_ROOT": "/opt/ti/ti-cgt-armllvm",
+        "PATH": "/opt/ti/ti-cgt-armllvm/bin:${PATH}"
+    }
+}

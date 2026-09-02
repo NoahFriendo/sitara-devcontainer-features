@@ -1,0 +1,14 @@
+{
+    "ubuntu_2204": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+        "features": {"ti-arm-clang": {}}
+    },
+    "ubuntu_2404": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+        "features": {"ti-arm-clang": {}}
+    },
+    "debian_12": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian-12",
+        "features": {"ti-arm-clang": {}}
+    }
+}
